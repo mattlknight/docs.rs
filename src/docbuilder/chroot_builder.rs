@@ -381,9 +381,9 @@ impl DocBuilder {
                       "SourceSerifPro-Bold.woff",
                       "SourceSerifPro-Regular.woff"]);
 
-        let source = PathBuf::from(&self.options.chroot_path)
+        let source = PathBuf::from("/")
             .join("home")
-            .join(&self.options.chroot_user)
+            .join("cratesfyi")
             .join("cratesfyi")
             .join("doc");
 
