@@ -271,9 +271,9 @@ impl DocBuilder {
     /// This function is checking first target in targets to see if documentation exists for a
     /// crate. Package must be successfully built in chroot environment first.
     fn have_documentation(&self, package: &Package) -> bool {
-        let crate_doc_path = PathBuf::from(&self.options.chroot_path)
+        let crate_doc_path = PathBuf::from("/")
             .join("home")
-            .join(&self.options.chroot_user)
+            .join("cratesfyi")
             .join("cratesfyi")
             .join("doc")
             .join(package.targets()[0].name().replace("-", "_").to_string());
