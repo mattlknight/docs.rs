@@ -252,8 +252,8 @@ impl DocBuilder {
     /// Runs a command in a chroot environment
     fn chroot_command<T: AsRef<str>>(&self, cmd: T) -> Result<String> {
         command_result(Command::new("sudo")
-            .arg("lxc-attach")
-            .arg("-n")
+            .arg("lxc")
+            .arg("exec")
             .arg(&self.options.container_name)
             .arg("--")
             .arg("su")
